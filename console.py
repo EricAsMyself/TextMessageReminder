@@ -1,8 +1,15 @@
 from phone import Texting
-def main():
+import sqlite3
 
-    phone = Texting()
-    phone.send_message("hello world")
+
+def main():
+    message(sqlite3.version)
+
+
+def message(message):
+    print(message)
+    # phone = Texting()
+    # phone.send_message("hello world")
 
 if __name__ == "__main__":
     main()
