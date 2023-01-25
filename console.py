@@ -8,8 +8,8 @@ def main():
 
 def message(message):
     print(message)
-    # phone = Texting()
-    # phone.send_message("hello world")
+    phone = Texting()
+    phone.send_message("hello world")
 
 if __name__ == "__main__":
     main()
