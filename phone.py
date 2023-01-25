@@ -5,8 +5,11 @@ from dotenv import load_dotenv
 load_dotenv()
 class Texting:
     def __init__(self):
-        self.client = Client(os.getenv('ACCOUNT_SID'), os.getenv('AUTH_TOKEN'))
+        self.client = Client(os.getenv('ACCOUNT_SID'), os.getenv('AUTH_TOKEN')) # This takes in the
+        # Tokens and produces a client which can send out messages.
     
+
+    # This will send a message out. When you have initialized the class, and add a message.
     def send_message(self, message):
         self.client.messages.create(
             body=message,
