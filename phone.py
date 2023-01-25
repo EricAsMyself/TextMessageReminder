@@ -3,14 +3,14 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-
-GCP_PROJECT_ID = os.getenv('GCP_PROJECT_ID')
-SERVICE_ACCOUNT_FILE = os.getenv('SERVICE_ACCOUNT_FILE')
-STORAGE_BUCKET_NAME = os.getenv('STORAGE_BUCKET_NAME')
-
-
-
-
 class Texting:
     def __init__(self):
-        client = Client(account_sid, auth_token)
+        self.client = Client(os.getenv('ACCOUNT_SID'), os.getenv('AUTH_TOKEN'))
+    
+    def send_message(self, message):
+        self.client.messages.create(
+            body=message,
+            from_=os.getenv('FROM_PHONE_NUMBER'),
+            to=os.getenv('PHONE_NUMBER')
+        )
+
