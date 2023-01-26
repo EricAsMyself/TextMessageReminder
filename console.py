@@ -1,13 +1,12 @@
 from phone import Texting
-import sqlite3
+from SQLDB import Database
 
 
 def main():
-    message(sqlite3.version)
+    message("")
 
 
 def message(message):
-    print(message)
     phone = Texting()
     phone.send_message("hello world")
 
