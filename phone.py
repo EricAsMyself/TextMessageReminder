@@ -10,10 +10,10 @@ class Texting:
     
 
     # This will send a message out. When you have initialized the class, and add a message.
-    def send_message(self, message):
+    def send_message(self, message, phone_number):
         self.client.messages.create(
             body=message,
             from_=os.getenv('FROM_PHONE_NUMBER'),
-            to=os.getenv('PHONE_NUMBER')
+            to=phone_number
         )
 
