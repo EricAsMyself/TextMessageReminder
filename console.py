@@ -4,6 +4,9 @@ import logging
 import os
 from dotenv import load_dotenv
 import pandas as pd
+from tqdm import tqdm
+
+
 
 def main():
     logging.info("Initializing the program")
@@ -39,7 +42,7 @@ def text_people(phone: Texting, people, message):
     if y_n == "y":
         logging.info("User Ok message")
         people_texted = ""
-        for person in people:
+        for person in tqdm(people):
             named_message = message.replace("*f*", person[1]).replace("*l*", person[2])
             logging.info(named_message)
             phone.send_message(named_message, person[3])
