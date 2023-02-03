@@ -31,7 +31,11 @@ class Database:
     def get_people(self):
         self.cursor.execute("SELECT * FROM people")
         return self.cursor.fetchall()
-        
+
+    def check_person(self, fname, lname):
+        self.cursor.execute(f"SELECT fname, lname FROM people Where fname = '{fname}' AND lname = '{lname}'")
+        return False if not self.cursor.fetchall() else True # returns True if person is found
+
     def close(self):
         self.conn.close()
 
