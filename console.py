@@ -16,9 +16,7 @@ def main():
     logging.info("Getting People")
     result = people_db.get_people()
     message = create_message()
-    for x in result:
-        print(x)
-    # text_people(phone, result, message)
+    text_people(phone, result, message)
 
 
 
