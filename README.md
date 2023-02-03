@@ -1,28 +1,51 @@
-# Text Message Reminder
-## Introduction
+# Overview
 
-This project utilizes the Twilio API to send out text messages to a group of people as a reminder.
-Requirements
+I was asked by a friend if I could create some code to send out text messages to a group of people.
 
-* Twilio account and API credentials
-* Python 3.6 or higher
-* Twilio Python library
-* A list of phone numbers to send messages to
 
-## Installation
+I decded to use sql lite for this project, to play around with databases. This code will look at a
+csv file and import it into a database. It also checks  to see if you have already added that person
+or not too. 
 
-1. Install the Twilio library by running pip install twilio
-1. Create a .env file in the root directory of the project and add the following environment variables:
-    TWILIO_ACCOUNT_SID - Your Twilio Account SID
-    TWILIO_AUTH_TOKEN - Your Twilio Auth Token
-    TWILIO_PHONE_NUMBER - The phone number provided by Twilio to send messages from
-1. Create a sql server
-## Usage
+I decided it was a great time to not only work on my objective code in python, but to also brush up on sql.
 
-4. Run python send_reminder.py
-1. Enter the message you would like to send as the reminder
-1. The script will send the message to all phone numbers listed in the sql server.
+I have a link below of a demo for the project, and go into detail about the code.
 
-## Note
+[Software Demo Video](http://youtube.link.goes.here)
 
-Please make sure to use valid phone numbers and test sending a message to yourself before sending to a group to avoid any mistake.
+# Relational Database
+
+I use sql lite for this project. Which is a simple way to add SQL databases to a python project.
+
+This SQL database is pretty simple, it's one table, with 
+| primary_key | fname | lname | phone_number |   |
+|-------------|-------|-------|--------------|---|
+I didnt' think much more was needed, however in the future adding in a family table could be interesting.
+
+
+# Development Environment
+
+For the libraries I used.
+* SQL Lite - for the sql databse
+* Twilio - for the phone api
+* Python-dotenv - for hidden values
+* pandas - importing the csv
+* tqdm - to show the progress bar
+
+
+I wrote this code in python, using VScode. 
+
+# Useful Websites
+
+{Make a list of websites that you found helpful in this project}
+
+- [Python](https://www.twilio.com/)
+- [Twilio](https://www.python.org/)
+
+# Future Work
+
+{Make a list of things that you need to fix, improve, and add in the future.}
+
+- Adding in more tables
+- Adding a way to remove people
+- Linking people together, to send less texts
