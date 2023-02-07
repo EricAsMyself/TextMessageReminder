@@ -47,8 +47,11 @@ I wrote this code in python, using VScode.
 With python installed, run in the terminal
 
 pip3 install Twilio
+
 pip3 install python-dotenv
+
 pip3 install pandas
+
 pip3 install tqdm
 
 Finally You will need families.csv in the bottom formated fname lname phone. 
