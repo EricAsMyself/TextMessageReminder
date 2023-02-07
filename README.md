@@ -42,6 +42,18 @@ I wrote this code in python, using VScode.
 - [Python](https://www.twilio.com/)
 - [Twilio](https://www.python.org/)
 
+# How to run
+
+With python installed, run in the terminal
+
+pip3 install Twilio
+pip3 install python-dotenv
+pip3 install pandas
+pip3 install tqdm
+
+Finally You will need families.csv in the bottom formated fname lname phone. 
+
+
 # Future Work
 
 {Make a list of things that you need to fix, improve, and add in the future.}
